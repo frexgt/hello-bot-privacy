@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terms of Service — Hello Welcome Bot</title>
+  <meta name="description" content="Terms of Service for the Hello Welcome Discord bot." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <div class="badge">Hello Welcome Bot</div>
+        <h1>Условия использования</h1>
+        <nav class="site-nav">
+          <a href="index.html">Privacy Policy</a>
+          <a class="active" href="terms.html">Terms of Service</a>
+        </nav>
+      </div>
+      <nav class="langs">
+        <a href="#ru" onclick="show('ru')">RU</a>
+        <a href="#en" onclick="show('en')">EN</a>
+      </nav>
+    </header>
+
+    <main class="card">
+      <section id="ru" class="lang active">
+        <p>Эти условия регулируют использование Discord-бота <strong>Hello Welcome Bot</strong>. Добавляя бота на сервер, вы соглашаетесь с ними.</p>
+
+        <h2>Что делает бот</h2>
+        <p>Бот приветствует новых участников сервера: упоминает их и отправляет сообщение с обложкой в канал <strong>hello</strong>.</p>
+
+        <h2>Правила использования</h2>
+        <ul>
+          <li>бот можно использовать только на серверах, где у вас есть право его добавлять;</li>
+          <li>нужно соблюдать <a href="https://discord.com/terms">условия Discord</a> и их правила сообщества;</li>
+          <li>нельзя использовать бота для спама, обмана, травли или любых незаконных действий.</li>
+        </ul>
+
+        <h2>Ответственность</h2>
+        <p>Бот предоставляется «как есть». Мы не гарантируем бесперебойную работу и не несём ответственность за сообщения, которые появляются на вашем сервере из-за настроек канала или прав бота.</p>
+        <p>Владелец сервера отвечает за то, как бот используется на этом сервере.</p>
+
+        <h2>Изменения и отключение</h2>
+        <p>Мы можем изменить функции бота или прекратить его работу в любой момент. Вы можете удалить бота с сервера в любое время.</p>
+
+        <h2>Контакты</h2>
+        <p>По вопросам условий использования напишите владельцу бота в Discord.</p>
+      </section>
+
+      <section id="en" class="lang">
+        <p>These terms govern the use of the Discord bot <strong>Hello Welcome Bot</strong>. By adding the bot to a server, you agree to them.</p>
+
+        <h2>What the bot does</h2>
+        <p>The bot greets new server members: it mentions them and sends a cover image message in the <strong>hello</strong> channel.</p>
+
+        <h2>Acceptable use</h2>
+        <ul>
+          <li>you may use the bot only on servers where you have permission to add it;</li>
+          <li>you must follow the <a href="https://discord.com/terms">Discord Terms of Service</a> and Community Guidelines;</li>
+          <li>you may not use the bot for spam, abuse, harassment, or any illegal activity.</li>
+        </ul>
+
+        <h2>Liability</h2>
+        <p>The bot is provided “as is”. We do not guarantee uninterrupted service and are not responsible for messages that appear on your server because of channel settings or bot permissions.</p>
+        <p>The server owner is responsible for how the bot is used on that server.</p>
+
+        <h2>Changes and removal</h2>
+        <p>We may change the bot’s features or stop providing it at any time. You may remove the bot from a server at any time.</p>
+
+        <h2>Contact</h2>
+        <p>For questions about these terms, contact the bot owner on Discord.</p>
+      </section>
+    </main>
+
+    <footer>Last updated: 6 September 2026</footer>
+  </div>
+
+  <script>
+    function show(lang) {
+      document.querySelectorAll(".lang").forEach((el) => el.classList.remove("active"));
+      document.getElementById(lang).classList.add("active");
+      document.documentElement.lang = lang;
+      document.querySelector("h1").textContent =
+        lang === "en" ? "Terms of Service" : "Условия использования";
+    }
+
+    if (location.hash === "#en") show("en");
+  </script>
+</body>
+</html>
